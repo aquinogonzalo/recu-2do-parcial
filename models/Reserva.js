@@ -47,6 +47,10 @@ const Reserva = sequelize.define('Reserva', {
         type: DataTypes.STRING(50),
         allowNull: false
     },
+    costo: {
+        type: DataTypes.FLOAT,
+        allowNull: false
+    },
     estado: {
         type: DataTypes.BOOLEAN,
         defaultValue: true
