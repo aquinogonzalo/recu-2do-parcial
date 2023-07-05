@@ -4,6 +4,7 @@ const express = require('express');
 const helmet = require('helmet');
 const morgan = require('morgan');
 require('dotenv').config();
+require('ejs');
 
 const path = require('path');
 

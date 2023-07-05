@@ -1,0 +1,37 @@
+<%- include('partials/header') %>
+
+    <div class="container">
+
+        <div class="row mt-5">
+            <h1 class="text-center border-botton">Reserva de Vuelos de un Aereopuerto</h1>
+            <div class="col">
+                <div class="col-md-3 mb-2">
+                    <a href="/crear-reserva" class="btn btn sm btn-primary" id>Nuevo </a>
+                    <a href="/" class="btn btn-info text-light">Inicio</a>
+                </div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>nombre</th>
+                            <th>apellido</th>
+                            <th>destino</th>
+                            <th>fecha_vuelo</th>
+                            <th>nombre_aereolinea</th>
+                            <th>cantidad_acompañantes</th>
+                            <th>telefono</th>
+                            <th>email</th>
+                            <th>costo</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="listaReservas">
+            
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="/js/lista-reservas.js"></script>
+
+    <%- include('partials/footer') %>

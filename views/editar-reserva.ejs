@@ -1,0 +1,89 @@
+<%- include('partials/header') %>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="row mb-2">
+            <div class="col-md-5">
+                <a href="/" class="btn btn-sm btn-info text-light">Inicio</a>
+            </div>
+        </div>
+
+        <div class="mx-auto">
+            <form id="formNuevaReserva" method="POST" class="rounded border p-3" data-id="<%= id %>">
+                <h3 class="mb-3 text-center bg-primary text-light rounded p-2">Actualiza una Reserva de vuelo</h3>
+                <div class="row">
+                    <div class="col col-md-6 col-sm-12 mb-3">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input type="text" required="true" class="form-control" id="nombre" name="nombre">
+                    </div>
+                    <div class="col col-md-6 col-sm-12 mb-3">
+                        <label for="apellido" class="form-label">Apellido</label>
+                        <input type="text" required="true" class="form-control" id="apellido"
+                            name="apellido">
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- Destino -->
+                    <div class="col col-md-6 col-sm-12 mb-3">
+                        <label for="destino" class="form-label">Destino</label>
+                        <input type="text" required="true" class="form-control" id="destino" name="destino">
+                    </div>
+
+                    <!-- Fecha de vuelo -->
+                    <div class="col col-md-6 col-sm-12 mb-3">
+                        <label for="fecha_vuelo" class="form-label">Fecha de vuelo</label>
+                        <input type="datetime-local" required="true" class="form-control" id="fecha_vuelo"
+                            name="fecha_salida">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <!-- Nombre de la aereolinea -->
+                    <div class="col col-md-6 col-sm-12 mb-3">
+                        <label for="nombre_aereolinea" class="form-label">Nombre de la aereolinea</label>
+                        <input type="text" required="true" class="form-control" id="nombre_aereolinea" name="nombre_aereolinea">
+                    </div>
+
+                    <!-- Cantidad de acompañantes -->
+                    <div class="col col-sm-12 col-md-6 mb-3">
+                        <label for=" cantidad_acompañantes" class="form-label">Cant. acompañantes</label>
+                        <input type="number" required="true" class="form-control" id=" cantidad_acompañantes"
+                            name=" cantidad_acompañantes">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <!-- Telefono -->
+                    <div class="col col-sm-12 col-md-6 mb-3">
+                        <label for="telefono" class="form-label">Teléfono</label>
+                        <input type="text" required="true" class="form-control" id="telefono"
+                            name="telefono">
+                    </div>
+
+                    <!-- Email contacto -->
+                    <div class="col col-sm-12 col-md-6 mb-3">
+                        <label for="email" class="form-label">Email contacto</label>
+                        <input type="email" required="true" class="form-control" id="email" name="email">
+                    </div>
+                </div>
+                <div class="col col-sm-12 col-md-12 mb-3">
+                    <label for="costo" class="form-label">Costo</label>
+                    <input type="number" required="true" class="form-control" id="costo" name="costo">
+                </div>
+
+                <div class="row d-flex align-items-center justify-content-end">
+                    <div class="col-sm-12 col-md-2 col-lg-2 col-xl-2 col-2 mb-1">
+                        <button type="submit" class="w-100 btn btn-sm btn-primary">Guardar</button>
+                    </div>
+                    <div class="col-sm-12 col-md-2 col-lg-2 col-xl-2 col-2 mb-1">
+                        <a href="/" class="w-100 btn btn-sm btn-secondary">Cancelar</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="/js/editar-reserva.js"></script>
+
+<%- include('partials/footer') %>
