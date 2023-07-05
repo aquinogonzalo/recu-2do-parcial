@@ -10,6 +10,9 @@ const path = require('path');
 const app = express();
 const port = process.env.PORT || 4500
 
+// Esta es la conexion con la base de datos
+const { conexionDB } = require('./database');
+conexionDB()
 
 // Middlewares
 // TODO: Implementar middlewares
