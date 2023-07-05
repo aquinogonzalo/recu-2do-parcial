@@ -1,10 +1,17 @@
 // Imports
 const cors = require('cors');
 const express = require('express');
+const express = require('express');
+const cors = require('cors');
+const helmet = require('helmet');
+const morgan = require('morgan');
+require('dotenv').config();
 
 const path = require('path');
 
 const app = express();
+const port = process.env.PORT || 4500
+
 
 // Middlewares
 // TODO: Implementar middlewares
