@@ -1,4 +1,22 @@
-const ctrlReservas = {};
+const Reserva = require('../models/Reserva');
+const ctrl = {};
+
+// ========================================
+//          Rutas para vistas               
+// ========================================
+ctrl.renderListaReservas = (req, res) => {
+    res.render('lista-reservas')
+}
+
+ctrl.renderNuevaReserva = (req, res) => {
+    res.render('nueva-reserva');
+}
+
+ctrl.renderEditarReserva = (req, res) => {
+    const { id } = req.params;
+    res.render('editar-reserva', { id })
+}
+
 
 // ==========================================
 //         Rutas para CRUD de reservas
